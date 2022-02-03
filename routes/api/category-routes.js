@@ -31,25 +31,15 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// router.post("/", async (req, res) => {
-//   try {
-//     const categoryData = await Category.create(req.body.category_name);
-//     res.status(200).json(categoryData);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
-
-router.post("/", (req, res) => {
-  // create a new category
-  Category.create({
-    category_name: req.body.category_name,
-  })
-    .then((dbCategoryData) => res.json(dbCategoryData))
-    .catch((err) => {
-      console.log(err);
-      res.status(400).json(err);
+router.post("/", async (req, res) => {
+  try {
+    const categoryData = await Category.create({
+      category_name: req.body.category_name,
     });
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 router.put("/:id", async (req, res) => {
