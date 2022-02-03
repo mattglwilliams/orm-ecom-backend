@@ -9,7 +9,7 @@
 
 ## Description
 
-For this project, I have used Sequilize, node.js and express.js to create an ORM e-commerce backend that can help businesses manage their inventory in a database.
+For this project, created an ORM e-commerce backend by creating an Express API that uses Sequelize to interact with a MySQL database.
 
 This app will allow you to view, create, update and delete your products, categories and tags in an API client like Insomnia.
 
