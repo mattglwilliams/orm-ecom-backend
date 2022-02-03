@@ -27,7 +27,9 @@ npm i
 
 Firstly, to use this app, make sure you have both node.js and MySQL installed. Once installed, follow the below steps:
 
-- Firstly, navigate into the db folder in the terminal and then log into the mysql CLI and run the below command to create the database.
+- Firstly, you need to create a .env file that holds the DB_NAME and your MySQL user name and password (DB_USER & DB_PW)
+
+- Next, navigate into the db folder in the terminal and then log into the mysql CLI and run the below command to create the database.
 
 ```
 source schema.sql
